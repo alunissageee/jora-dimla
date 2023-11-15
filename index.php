@@ -1,0 +1,380 @@
+<?php
+session_start();
+require 'dbcon.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jora</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('images/bg.png');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .background-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .col {
+            padding: 20px;
+        }
+
+        #larger-about-img {
+            height: 90vh;
+            width: auto;
+        }
+
+        .carousel-inner img {
+            width: 80%;
+            margin: auto;
+        }
+
+        #carouselExampleControls {
+            width: 70%;
+            margin: auto;
+        }
+
+        .figure {
+            height: 400px; 
+        }
+        .figure img {
+            height: 100%; 
+            object-fit: cover; 
+        }
+        .img-thumbnail {
+            width: 100%; 
+            height: auto; 
+            border: 2px solid red; 
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand" href="#home">
+                <img src="images/j.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#academic">Academic</a>
+                    <a class="nav-link" href="#achievement">Achievement</a>
+                    <a class="nav-link" href="#skills">Skills</a>
+                    <a class="nav-link" href="#likes">Likes</a>
+                    <a class="nav-link" href="#pictures">Pictures</a>
+                    <a class="nav-link" href="#socials">Socials</a>
+                    <a class="nav-link" href="#message">Message</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- introduction -->
+    <img src="images/intro.png" id="home" class="img-fluid d-block mx-auto" alt="Intro">
+
+    <div class="container-fluid text-center" id="about">
+        <div class="row align-items-start">
+            <div class="col-lg-6 mt-5">
+                <h4 class="display-3 text-center pt-5 text-danger">Hi! I am Jora</h4>
+                <p class="display-6 text-center pt-5">My full name is Ma. Cristina Jora M. Dimla, 20 years old currently
+                    a 3rd year Information Technology student at Bulacan Agricultural State College.</p>
+                <p class="text-center pt-5">Welcome to my personal website! As you explore, you will get to know more
+                    about me little by little.</p>
+            </div>
+            <div class="col-lg-6 mt-5">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/pic1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/pic2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/pic3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/pic.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- academic background -->
+    <div class="container text-center" id="academic" style="background-image: url(images/bg.png);">
+        <h4 class="display-3 text-center pt-5 text-danger">Academic Background</h4>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card border border-danger">
+                    <img src="images/elementary.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Elementary</h5>
+                        <p class="card-text">I studied at Anyatam Elementary school during my Kindergarten up until Grade 1, later on for my second grade I transferred to Community Child Development Center. However, I did not last long, I soon migrated to Dubai, UAE and studied my grade 3 up until grade 7 at United International Private School.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border border-danger">
+                    <img src="images/highschool.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Highschool</h5>
+                        <p class="card-text">After living at Dubai for 5 years, we decided to go back home. I studied my highschool years starting from grade 8 until I finished senior high school at Montessori De San Ildefonso.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border border-danger">
+                    <img src="images/college.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">College</h5>
+                        <p class="card-text">For this present times, thankfully I am a 3rd year student already! I am now a Information Technology student at Bulacan Agricultural State College. As I already spent years as a college student as I only have one more school year left, hopefully everything will go as planned.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- achievements -->
+    <div class="container-achievement">
+        <div class="row">
+            <h4 class="display-3 text-center pt-5 text-danger" id="achievement">Achievements</h4>
+            <div class="col shadow mb-1 bg-body rounded text-center d-inline-block py-5 px-5 my-5 mx-5">
+                <h4 class="text-danger">Senior High School</h4>
+                <p>With Honors</p>
+                <p>Conduct Awardee</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col shadow mb-1 bg-body rounded text-center d-inline-block py-5 px-5 my-5 mx-5">
+                <h4 class="text-danger">Junior High School</h4>
+                <p>With Honors</p>
+                <p>Best in English</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- skills -->
+    <div class="container-achievement" id="skills">
+        <div class="row">
+            <h4 class="display-3 text-center pt-5 text-danger" id="achievement">Skills</h4>
+            <div class="col shadow mb-1 bg-body rounded text-center d-inline-block py-5 px-5 my-5 mx-5">
+                <h4 class="text-danger">Languages</h4>
+                <p>C++</p>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>Java</p>
+                <p>PHP</p>
+                <p>Python</p>
+            </div>
+            <div class="col shadow mb-1 bg-body rounded text-center d-inline-block py-5 px-5 my-5 mx-5">
+                <h4 class="text-danger">Others</h4>
+                <p>Bootstrap</p>
+                <p>Adobe Photoshop</p>
+                <p>Adobe Illustrator</p>
+                <p>Microsoft Excel</p>
+                <p>Canva</p>
+            </div>
+        </div>
+    </div>
+        <!-- likes-->
+    <div class="container text-center" id="likes" style="background-image: url(images/bg.png);">
+        <h4 class="display-3 text-center pt-5 text-danger">Likes</h4>
+        <p class="text-center">As a 20 year old, what do I even like?</p>
+    
+        <div class="row">
+            <div class="col-md-6">
+                <figure class="figure">
+                    <img src="images/seventeen.jpg" class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption text-end">Seventeen, my favourite K-Pop boy group.</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-6">
+                <figure class="figure">
+                    <img src="images/gose.jpg" class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption text-end">Going Seventeen, a variety show that I love to watch.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-6 pt-5">
+                <figure class="figure">
+                    <img src="images/carbonara.jpg" class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption text-end">Carbonara, my comfort food, I prefer this over spaghetti.
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-6 pt-5">
+                <figure class="figure">
+                    <img src="images/perfume.jpg" class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption text-end">Perfumes and makeup, I enjoy buying them!</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <!-- gallery -->
+    <div class="container text-center" id="pictures" style="background-image: url(images/bg.png);">
+        <h4 class="display-3 text-center pt-5 text-danger pt-5">Pictures</h4>
+        <p class="text-center">Let us take down the memory lane and look myself grow up through pictures!</p>
+        <div class="row justify-content-center">
+            <div class="col-md-2">
+                <img src="images/5.jpg" class="img-thumbnail" alt="...">
+            </div>
+            <div class="col-md-2">
+                <img src="images/1.jpg" class="img-thumbnail" alt="...">
+            </div>
+            <div class="col-md-2">
+                <img src="images/2.jpg" class="img-thumbnail" alt="...">
+            </div>
+            <div class="col-md-2">
+                <img src="images/3.jpg" class="img-thumbnail" alt="...">
+            </div>
+            <div class="col-md-2">
+                <img src="images/4.jpg" class="img-thumbnail" alt="...">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-2">
+                <img src="images/8.jpg" class="img-thumbnail" alt="...">
+            </div>
+            <div class="col-md-2">
+                <img src="images/6.jpg" class="img-thumbnail" alt="...">
+            </div>
+            <div class="col-md-2">
+                <img src="images/7.jpg" class="img-thumbnail" alt="...">
+            </div>
+            <div class="col-md-2">
+                <img src="images/9.jpg" class="img-thumbnail" alt="...">
+            </div>
+            <div class="col-md-2">
+                <img src="images/10.jpg" class="img-thumbnail" alt="...">
+            </div>
+        </div>
+    </div>
+
+    <!-- social media -->
+    <div class="container text-center" id="socials" style="background-image: url(images/bg.png);">
+        <h4 class="display-3 text-center pt-5 text-danger pt-5">Socials</h4>
+        <p class="text-center">Let us catch up! The following are my social media accounts.</p>
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Facebook
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <a href="https://www.facebook.com/jora.dimla" target="_blank">Jora Dimla</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Instagram
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <a href="https://www.instagram.com/__crxtn/" target="_blank">@__crxtn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Email
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">macristinajoradimla.basc@gmail.com</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- message -->
+    <div class="container text-center" id="message" style="background-image: url(images/bg.png);">
+        <h4 class="display-3 text-center pt-5 text-danger pt-5">Messages</h4>
+        <p class="text-center">Too busy to check my socials but want to catch up? Send me a message!</p>
+        <div class="container text-center" id="message" style="background-image: url(images/bg.png);">
+            <form action="function.php" method="POST">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name = "name"  placeholder="Name">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" name = "email"  placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message" ></textarea>
+                </div>
+                <input class="btn btn-primary" type="submit" name="sendMessage" value="Submit">
+            </form>
+        </div>
+
+    </div>
+
+
+    <!-- js -->
+    <script src="js/bootstrap.bundle.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
